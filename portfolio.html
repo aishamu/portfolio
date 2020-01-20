@@ -1,0 +1,451 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Page</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  </head>
+  <style>
+  @import url(https://fonts.googleapis.com/css?family=Dancing+Script|Ubuntu|Roboto:400,700);
+
+/*html, body{
+  height: 100%;
+}*/
+
+body{
+  font-family: "Ubuntu", sans-serif;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+
+.navbar-brand{
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.navbar li{
+  text-transform: capitalize;
+}
+
+#splash{
+  background-image: url(https://www.w3schools.com/getcertified.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  margin-top: 50px;
+  padding-top:10%;
+  padding-bottom: 70px;
+  color: #fff;
+  font-size: 3em;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.5),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+
+  #splash h1{
+    font-size: 2em;
+  }
+
+  #splash a{
+    color: #fff;
+  }
+
+  #splash a:hover{
+    color: #e7e7e7;
+  }
+
+#portfolio{
+  background-image: url(https://wallpaperaccess.com/full/676563.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+  #portfolio h1{
+    font-size: 5em;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.5),
+                 0px 18px 23px rgba(0,0,0,0.1);
+  }
+
+.thumbnail{
+  position: relative;
+}
+
+  .thumbnail img{
+    min-height: 250px;
+    min-width: 300px;
+  }
+
+.thumbnail-hover{
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 99%;
+  width: 99%;
+  opacity: 0;
+  transition:2s;
+}
+
+    .thumbnail-hover:hover{
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    height: 99%;
+    width: 99%;
+    background-color: rgba(0,0,0,0.8);
+    margin: 0 auto;
+    transition:.5s;
+    opacity: 1;
+    padding-top: 30%;
+    border-radius: 5px;
+  }
+
+  .thumbnail-hover i{
+    text-decoration: none;
+    color: white;
+  }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+#about{
+  background-image: url(https://wallpaperaccess.com/full/676563.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+  #about h1{
+    font-size: 5em;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.5),
+                 0px 18px 23px rgba(0,0,0,0.1);
+  }
+
+  #about p{
+    font-size: 1.5em;
+    text-align: justify;
+  }
+
+  #about img{
+    padding: 10px;
+    /*max-width: 180px;*/
+  }
+
+#white-bg{
+  /*background-color: rgba(0,0,0, 0.5);
+  border-radius: 20px;
+  margin-right: 10px;*/
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 6% 2%;
+}
+
+#contact{
+  background-image: url(https://wallpaperaccess.com/full/676563.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+  #contact h1{
+    font-size: 5em;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.5),
+                 0px 18px 23px rgba(0,0,0,0.1);
+  }
+
+  #contact h2{
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.5),
+                 0px 18px 23px rgba(0,0,0,0.1);
+  }
+
+  #contact address{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  #contact .fa-stack{
+    color: #333;
+  }
+
+  #contact .fa-stack:hover .fa-stack-1x{
+    color: #333;
+    transition: 0.5s;
+  }
+
+  #contact .fa-stack:hover .fa-stack-2x{
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  #contact a{
+    text-decoration: none;
+  }
+
+hr{
+  width: 25%;
+}
+  </style>
+  <body>
+
+    <!-- Start Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">Aisha Mutip</span>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#portfolio-link">Portfolio</a></li>
+            <li><a href="#about-link">About</a></li>
+            <li><a href="#contact-link">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- End Navagation Bar -->
+
+    <!-- Start Splash Section  -->
+    <a class="anchor" id="home"></a>
+    <div id="splash" class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1>Aisha Mutip</h1>
+          <hr />
+          <p>
+            Web Developer
+          </p>
+          <p>
+            <a href="https://github.com/aishamu/" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/aisha-m-423472162/" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
+           </p>
+        </div>
+      </div>
+    </div>
+    <!-- End Splash Section  -->
+
+    <!-- Start portfolio Section  -->
+    <a class="anchor" id="portfolio-link"></a>
+    <div id="portfolio" class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 style="color:black">Portfolio</h1>
+          <hr />
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="thumbnail">
+                  
+                    <img class="img-responsive" src="proj_img.png" alt="bruce-lee-tribute-page">
+                   <div class="caption">
+                    <h3>Read It</h3>
+                    <p>It is social cataloginig website that allow to search of books and open it as PDF        <br> .</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="thumbnail">
+                 
+                    <img class="img-responsive" src=" smartshop.png">
+                   <div class="caption">
+                    <h3>Smart Shop</h3>
+                    <p>It is a system that compare between products prices in different markets to help you to decide which the best offer </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="thumbnail">
+                 
+					<video width="300" height="270" controls>
+                   <source src="v.MOV">
+				   </video>
+                   <div class="caption">
+                    <h3>Moon Tour</h3>
+                    <p>it is an app where kids learn about planets with AR technology.  </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="thumbnail">
+                 
+                    <img src="tyc.png">
+                   <div class="caption">
+                    <h3>Track Your Child </h3>
+                    <p>It is a System to track a child by messages,daily Reports and Camera <br>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="thumbnail">
+                     
+                    <img src="https://images.unsplash.com/photo-1499673610122-01c7122c5dcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60">
+                   <div class="caption">
+                    <h3>Alhmny</h3>
+                    <p> A web app that analysis data to determine which city we can invest. </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="thumbnail">
+                    
+                    <img src="phaseus.png">
+                   <div class="caption">
+                    <h3>PhaseUs</h3>
+                    <p>PhaseUs’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End portfolio Section  -->
+
+    <!-- Start About Section -->
+    <a class="anchor" id="about-link"></a>
+    <div id="about" class="container-fluid text-center">
+          <h1 style="color:black">About</h1>
+          <hr />
+          <div class="container">
+            <div class="row row-eq-height">
+              <!-- <div class="col-lg-1"></div> -->
+            
+              <div id="white-bg" class="col-lg-10" style="margin-left:50" >
+		 
+               <p style= "color:black">
+ developed set of skills in programming languages that I used to program projects. 
+
+                  
+                </p>  
+  
+			 
+
+				               <p style= "color:black">
+OBJECTIVE STATEMENT : To utilize my technical and management skills for achieving the target and developing the best performance in the company. I would like to implement my innovative ideas, skills and creativity for accomplishing the projects.                     
+ </p>
+
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- End About Section -->
+
+    <!-- Start Contact Section -->
+    <a class="anchor" id="contact-link"></a>
+    <div id="contact" class="container-fluid text-center">
+		 <br>
+			 <br>
+			 <br> <br>			 <br>
+
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+     <h1 style="color:black">Contact</h1>
+      <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 style="color:black">Social</h2>
+         
+            <a href="https://www.linkedin.com/in/aisha-m-423472162/">
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <a href="https://github.com/aishamu/">
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+     
+          </div>
+          <div class="col-lg-4">
+            <h2 style="color:black">Location</h2>
+            <address style= "color:black">
+              Jeddah , Saudi Arabia 
+            </address>
+           
+          </div>
+          <div class="col-lg-4">
+            <h2 style="color:black">Communication</h2>
+            <a href="aishamutip@hotmail.com">
+              <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact Section -->
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".navbar-nav li").click(function(){
+          $(".navbar-nav li").removeClass("active");
+          $(this).addClass("active");
+        }
+        );
+
+        $('.navbar-nav a').click(function(event){
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 500);
+        });
+
+      }
+      );
+    </script>
+  </body>
+</html>
